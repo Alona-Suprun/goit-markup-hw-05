@@ -17,10 +17,9 @@
   --main-background-color: rgba(255, 255, 255, 1);
   --secondary-background-color: rgba(245, 244, 250, 1);
   --footer-background-color: #2f303a;
-  --main-text-color: #212121;
+  --main-text-color: rgba(33, 33, 33, 1);
   --secondary-text-color: rgba(117, 117, 117, 1);
   --accent-color: rgba(33, 150, 243, 1);
-  --black-for-text: rgba(33, 33, 33, 1);
   --footer-contacts: rgba(255, 255, 255, 0.6);
   --header-stroke: rgba(236, 236, 236, 1);
   --hero-backgroumd: rgba(196, 196, 196, 1);
@@ -81,7 +80,7 @@ p {
   line-height: 1.2;
 }
 .logo-part-black {
-  color: var(--black-for-text);
+  color: var(--main-text-color);
 }
 /*главная навигация*/
 .main-nav {
@@ -491,13 +490,12 @@ p {
   transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.item:hover .card-overlay,
-.item:hover .card-overlay {
+.cards-h-f:hover .card-overlay,
+.cards-h-f:focus .card-overlay {
   transform: translateY(-100%);
 }
 .card-overlay-text {
   position: absolute;
-  display: flex;
   width: 322px;
   height: 168px;
   top: 50%;
@@ -509,8 +507,8 @@ p {
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
-.item:hover .card-overlay-text,
-.item:hover .card-overlay-text {
+.cards-h-f:hover .card-overlay-text,
+.cards-h-f:focus .card-overlay-text {
   opacity: 1;
 }
 .card-text {
@@ -522,6 +520,7 @@ p {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--main-text-color);
 }
 .cards-description {
   margin-top: 4px;
